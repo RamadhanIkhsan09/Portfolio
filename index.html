@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f3ec;--ink:#14281f;--green:#1d3a2c;--sage:#a9b8a0;--sage2:#dfe5d6;--terra:#c0623c;--mut:#5b6b61;--card:#fffdf8;--line:#d9d6ca;--serif:'Fraunces',Georgia,serif;--sans:'Inter',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{background:var(--bg);color:var(--ink);font:16px/1.65 var(--sans)}
+a{color:inherit}
+.w{max-width:1120px;margin:0 auto;padding:0 24px}
+header{position:sticky;top:0;z-index:9;background:rgba(246,243,236,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header .w{display:flex;justify-content:space-between;align-items:center;height:60px;gap:16px}
+.logo{font:600 15px var(--sans);letter-spacing:.12em}
+nav{display:flex;gap:22px;flex-wrap:wrap}
+nav a{text-decoration:none;font-size:14px;color:var(--mut)}nav a:hover{color:var(--terra)}
+section{padding:96px 0}
+.eyebrow{font:600 12px var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--terra);margin-bottom:16px}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.12}
+h1{font-size:clamp(38px,6vw,72px);max-width:14ch;letter-spacing:-.02em}
+h2{font-size:clamp(30px,4vw,46px);margin-bottom:28px}
+h3{font-size:22px}
+.hero{display:grid;grid-template-columns:1.3fr 1fr;gap:56px;align-items:center}
+.hero p.sub{font-size:18px;color:var(--mut);max-width:46ch;margin:22px 0 32px}
+.btn{display:inline-block;padding:13px 24px;border-radius:99px;text-decoration:none;font-weight:500;font-size:15px;margin:0 10px 10px 0;border:1px solid var(--green);transition:.2s}
+.btn.p{background:var(--green);color:#fff}.btn.p:hover{background:var(--terra);border-color:var(--terra)}
+.btn.s:hover{background:var(--sage2)}
+.visual{aspect-ratio:4/5;border-radius:200px 200px 24px 24px;background:linear-gradient(160deg,var(--sage),var(--green));background-size:cover;background-position:center;position:relative;overflow:hidden}
+.visual .appr{position:absolute;left:16px;right:16px;bottom:16px;background:var(--card);border-radius:18px;padding:18px 20px}
+.appr small{font:600 11px var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--terra)}
+.appr h3{font-size:20px;margin:4px 0}.appr p{font-size:14px;color:var(--mut);line-height:1.5}
+.about{background:var(--green);color:#eef1e8}
+.about h2{color:#fff}.about .eyebrow{color:var(--sage)}
+.cols{display:grid;grid-template-columns:1.4fr 1fr;gap:56px}
+.about p{margin-bottom:18px;color:#d4dccc}
+.pr{border-top:1px solid rgba(255,255,255,.2);padding:18px 0}
+.pr h3{color:#fff;display:flex;gap:12px;align-items:baseline}.pr h3 span{font:500 12px var(--sans);color:var(--terra)}
+.pr p{margin:4px 0 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:24px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;transition:.25s}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 40px -20px rgba(20,40,31,.35)}
+.card:first-child{grid-column:1/-1;flex-direction:row}
+.thumb{aspect-ratio:16/10;background:var(--sage2) center/cover;display:flex;align-items:flex-end;padding:16px;font:400 64px/1 var(--serif);color:var(--green);opacity:.9}
+.card:first-child .thumb{flex:1.1;aspect-ratio:auto;min-height:280px}
+.cb{padding:24px;flex:1;display:flex;flex-direction:column;gap:10px}
+.tag{font:600 11px var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--terra)}
+.cb p{color:var(--mut);font-size:15px}.del{font-size:13px!important;border-top:1px dashed var(--line);padding-top:10px}
+.cb a{margin-top:auto;font-weight:600;font-size:14px;text-decoration:none;color:var(--green)}.cb a:hover{color:var(--terra)}
+.ex{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:0 40px}
+.ex div{border-top:1px solid var(--ink);padding:22px 0 30px}
+.ex p{color:var(--mut);font-size:15px;margin-top:8px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}
+.chips span{background:var(--sage2);padding:6px 14px;border-radius:99px;font-size:13px}
+.contact{background:var(--sage2);text-align:center}
+.contact h2{max-width:16ch;margin:0 auto 20px}.contact p{max-width:52ch;margin:0 auto 32px;color:var(--mut)}
+footer{padding:28px 0;text-align:center;font-size:13px;color:var(--mut)}
+.rv{opacity:0;transform:translateY(18px);transition:.7s}.rv.in{opacity:1;transform:none}
+@media(max-width:760px){.hero,.cols{grid-template-columns:1fr}.card:first-child{flex-direction:column}section{padding:64px 0}.visual{aspect-ratio:1}nav{gap:14px}.logo{display:none}}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script>
+const $=(t,c,h)=>{const e=document.createElement(t);if(c)e.className=c;if(h!=null)e.textContent=h;return e};
+const A=(t,c,txt,href)=>{const e=$(t,c,txt);if(href)e.href=href;return e};
+async function load(){
+  if(location.search.includes('preview')){try{const d=localStorage.getItem('portfolio-draft');if(d)return JSON.parse(d)}catch(e){}}
+  const r=await fetch('content.json?'+Date.now());if(!r.ok)throw new Error(r.status);return r.json();
+}
+function render(d){
+  document.title=d.site.title;const app=document.getElementById('app');app.innerHTML='';
+  const h=d.hero,ab=d.about,ex=d.expertise,ct=d.contact;
+  // header
+  const hd=$('header'),w=$('div','w'),nav=$('nav');
+  d.site.nav.forEach(n=>nav.append(A('a','',n.label,n.href)));
+  w.append($('span','logo',h.name),nav);hd.append(w);
+  // hero
+  const s1=$('section');s1.id='home';const w1=$('div','w hero rv'),l=$('div');
+  l.append($('div','eyebrow',h.role),$('h1','',h.headline),$('p','sub',h.sub));
+  l.append(A('a','btn p',h.cta1.label,h.cta1.href));
+  if(h.cta2&&h.cta2.label)l.append(A('a','btn s',h.cta2.label,h.cta2.href));
+  const v=$('div','visual');if(h.image)v.style.backgroundImage=`url("${h.image}")`;
+  const ap=$('div','appr');ap.append($('small','',h.approachLabel),$('h3','',h.approachTitle),$('p','',h.approachText));
+  v.append(ap);w1.append(l,v);s1.append(w1);
+  // about
+  const s2=$('section','about');s2.id='about';const w2=$('div','w cols rv'),a1=$('div');
+  a1.append($('div','eyebrow','About'),$('h2','',ab.title));ab.paragraphs.forEach(p=>a1.append($('p','',p)));
+  const a2=$('div');ab.principles.forEach((p,i)=>{const r=$('div','pr');const t=$('h3','',p.title);t.prepend($('span','','0'+(i+1)));r.append(t,$('p','',p.text));a2.append(r)});
+  w2.append(a1,a2);s2.append(w2);
+  // projects
+  const s3=$('section');s3.id='projects';const w3=$('div','w');
+  w3.append($('div','eyebrow','Selected Work'),$('h2','','Projects'));
+  const g=$('div','grid');
+  d.projects.forEach((p,i)=>{const c=$('article','card rv'),t=$('div','thumb');
+    if(p.image)t.style.backgroundImage=`url("${p.image}")`;else t.textContent='0'+(i+1);
+    const b=$('div','cb');b.append($('span','tag',p.tag),$('h3','',p.title),$('p','',p.desc));
+    if(p.deliverables)b.append($('p','del','Deliverables: '+p.deliverables));
+    b.append(A('a','','View Case Study ↗',p.link||'#'));c.append(t,b);g.append(c)});
+  w3.append(g);s3.append(w3);
+  // expertise
+  const s4=$('section');s4.id='expertise';const w4=$('div','w rv');
+  w4.append($('div','eyebrow','Skills'),$('h2','',ex.title));
+  const eg=$('div','ex');ex.items.forEach(i=>{const x=$('div');x.append($('h3','',i.title),$('p','',i.text));eg.append(x)});
+  w4.append(eg);const ch=$('div','chips');ex.tools.forEach(t=>ch.append($('span','',t)));w4.append(ch);s4.append(w4);
+  // contact
+  const s5=$('section','contact');s5.id='contact';const w5=$('div','w rv');
+  w5.append($('div','eyebrow',ct.eyebrow),$('h2','',ct.title),$('p','',ct.text),
+    A('a','btn p','Email Me ↗','mailto:'+ct.email),A('a','btn s','LinkedIn ↗',ct.linkedin));
+  s5.append(w5);
+  const f=$('footer','','© '+new Date().getFullYear()+' '+h.name);
+  app.append(hd,s1,s2,s3,s4,s5,f);
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
+  document.querySelectorAll('.rv').forEach(e=>io.observe(e));
+}
+load().then(render).catch(e=>{document.getElementById('app').innerHTML='<p style="padding:40px;font-family:sans-serif">Gagal memuat content.json. Buka lewat web server (bukan file://), mis. <code>python3 -m http.server</code>, atau upload ke hosting.</p>'});
+</script>
+</body>
+</html>
