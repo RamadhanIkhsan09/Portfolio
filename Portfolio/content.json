@@ -1,0 +1,97 @@
+{
+  "site": {
+    "title": "Learning by Design — Portfolio",
+    "nav": [
+      {"label": "Home", "href": "#home"},
+      {"label": "About", "href": "#about"},
+      {"label": "Projects", "href": "#projects"},
+      {"label": "Expertise", "href": "#expertise"},
+      {"label": "Contact", "href": "#contact"}
+    ]
+  },
+  "hero": {
+    "name": "YOUR NAME",
+    "role": "Instructional Designer · Learning & Development",
+    "headline": "I design learning experiences that make knowledge meaningful.",
+    "sub": "Instructional design, digital learning, training development, and learning culture initiatives.",
+    "cta1": {"label": "Explore My Projects", "href": "#projects"},
+    "cta2": {"label": "Download CV", "href": "cv.pdf"},
+    "approachLabel": "My Approach",
+    "approachTitle": "Learning with purpose.",
+    "approachText": "Connecting learning objectives, engaging experiences, and measurable outcomes.",
+    "image": ""
+  },
+  "about": {
+    "title": "About Me",
+    "paragraphs": [
+      "I am an Instructional Designer working in Learning & Development, with experience in developing digital learning experiences, designing and facilitating training programs, and creating initiatives that support organizational learning culture.",
+      "My work involves translating subject matter expertise into structured learning experiences, supporting e-learning delivery, evaluating learning outcomes, and creating engaging digital content to reinforce company values and knowledge retention.",
+      "I believe effective learning goes beyond delivering information. It requires thoughtful design, meaningful engagement, and continuous improvement based on feedback and learning data."
+    ],
+    "principles": [
+      {"title": "Design", "text": "Learning with clear objectives."},
+      {"title": "Engage", "text": "Learning that captures attention."},
+      {"title": "Improve", "text": "Learning informed by evidence."}
+    ]
+  },
+  "projects": [
+    {
+      "tag": "E-Learning",
+      "title": "From Subject Matter to Digital Learning",
+      "desc": "Mengubah materi dari ahli menjadi course digital yang terstruktur, interaktif, dan sesuai dengan tujuan pembelajaran.",
+      "deliverables": "Storyboard, course module, assessment, QA, learning report",
+      "link": "#",
+      "image": ""
+    },
+    {
+      "tag": "Training",
+      "title": "Designing Effective Training",
+      "desc": "Learning objectives, training materials, facilitation, and evaluation.",
+      "deliverables": "Modul training, slide, panduan fasilitator, evaluasi",
+      "link": "#",
+      "image": ""
+    },
+    {
+      "tag": "Culture",
+      "title": "Bringing Company Values to Life",
+      "desc": "Digital content and communication materials for organizational culture.",
+      "deliverables": "Flyer, konten digital, kampanye internal",
+      "link": "#",
+      "image": ""
+    },
+    {
+      "tag": "Gamification",
+      "title": "Building a Learning Habit Through Quizzes",
+      "desc": "Knowledge refreshment and engagement program.",
+      "deliverables": "Bank soal, kuis berkala, laporan partisipasi",
+      "link": "#",
+      "image": ""
+    },
+    {
+      "tag": "Analytics",
+      "title": "Turning Learning Data into Insights",
+      "desc": "Reporting, evaluation, and recommendations for improvement.",
+      "deliverables": "Learning report, analisis asesmen, rekomendasi",
+      "link": "#",
+      "image": ""
+    }
+  ],
+  "expertise": {
+    "title": "My Expertise",
+    "items": [
+      {"title": "Instructional Design", "text": "Learning objectives, content structuring, storyboard development, assessment design, dan learning experience design."},
+      {"title": "Digital Learning Development", "text": "E-learning development, course quality assurance, LMS administration atau support, dan learning content maintenance."},
+      {"title": "Training & Facilitation", "text": "Training design, learning material development, training delivery, dan participant evaluation."},
+      {"title": "Digital Content & Visual Communication", "text": "Digital learning content, internal campaign, flyer, dan komunikasi nilai perusahaan."},
+      {"title": "Learning Evaluation & Analytics", "text": "Learning reports, assessment analysis, training evaluation, dan rekomendasi perbaikan."}
+    ],
+    "tools": ["LMS", "Authoring tools", "PowerPoint", "Canva", "Excel"]
+  },
+  "contact": {
+    "eyebrow": "Let's connect",
+    "title": "Let's make learning meaningful.",
+    "text": "I'm always interested in creating meaningful learning experiences and exploring new ways to support learning and development.",
+    "email": "you@example.com",
+    "linkedin": "https://www.linkedin.com/in/your-profile"
+  }
+}
